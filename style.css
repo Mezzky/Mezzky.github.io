@@ -114,12 +114,8 @@ header{
     transform: scale(1.2);
 }
 .footer{
-    margin: auto;
+    margin: 0 auto 30px;
     width: max-content;
-    top: 590px;
-    left: 0;
-    right: 0;
-    position: absolute;
     font-weight: bold;
     /* background-color: #1772eb; */
     text-align: center;
@@ -509,3 +505,12 @@ header{
 
 /* Akhir Ikon Style */
 
+/* Responsive Media */
+@media (min-width: 650px){
+    .footer{
+        top: 595px;
+        left: 0;
+        right: 0;
+        position: absolute;
+    }
+}
