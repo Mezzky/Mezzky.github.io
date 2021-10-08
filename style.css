@@ -113,6 +113,28 @@ header{
     /* opacity: .3; */
     transform: scale(1.2);
 }
+.footer{
+    margin: auto;
+    width: max-content;
+    top: 590px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    font-weight: bold;
+    /* background-color: #1772eb; */
+    text-align: center;
+    font-family: cursive;
+    font-size: 15px;
+}
+.footer a{
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+}
+.footer a:hover{
+    color: rgb(80, 77, 77);
+    text-decoration: underline;
+}
 /* Akhir Main Style */
 
 
