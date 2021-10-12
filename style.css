@@ -97,7 +97,7 @@ header{
     cursor: pointer;
     /* box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, .15),
                 -6px -6px 10px -1px rgba(255, 255, 255, .7); */
-    transition: .3s;
+    transition: 0;
 }
 .menu a i{
     font-size: 40px;
@@ -512,5 +512,8 @@ header{
         left: 0;
         right: 0;
         position: absolute;
+    }
+    .menu a{
+        transition: .5s;
     }
 }
