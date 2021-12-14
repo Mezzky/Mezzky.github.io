@@ -512,3 +512,9 @@ header{
         transition: .5s;
     }
 }
+
+@media (max-width: 760px){
+    .hovering{
+        margin: 0 20px;
+    }
+}
