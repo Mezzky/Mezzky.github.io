@@ -1,0 +1,46 @@
+/* Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800;900&family=Poppins:wght@100;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* Tailwind Reset */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Main Style */
+.links{
+    @apply text-dark font-semibold duration-100 relative laptop:text-lg;
+}
+.links::after{
+    content: '';
+    @apply bg-dark w-0 h-[2px] absolute left-0 bottom-0 hover:w-full duration-300;
+}
+
+.btn-link{
+    @apply py-1 px-6 rounded-md duration-300 w-max font-semibold laptop:text-2xl laptop:py-2 laptop:px-10;
+}
+
+.sosmed-links{
+    @apply text-dark text-xl laptop:text-3xl hover:scale-110 duration-300;
+}
+
+/* Menu Toggle Animation */
+.hamburger-active > span:nth-child(1) {
+    @apply -rotate-[40deg];
+}
+
+.hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+    @apply w-[35px] rotate-[40deg];
+}
+
+.navbar.slide {
+    @apply visible opacity-100 backdrop-blur-md;
+}
+
+/* Scrolled Animation */
+header.scrolled {
+    @apply bg-white;
+}

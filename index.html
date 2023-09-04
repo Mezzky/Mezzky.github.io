@@ -1,65 +1,403 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website's Menu</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mezzky Portfolio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/output.css">
+    <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/1c6364f841.js" crossorigin="anonymous"></script>
+    <!-- AOS Style -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<body>
-    <div class="hovering">
-    <div class="container">
-        <header>Website's Menu</header>
-        <div class="menu">
 
-            <!-- Animasi Shape -->
-            <div class="shape-1"></div>
-            <div class="shape-2"></div>
-            <div class="shape-3"></div>
-            <div class="shape-4"></div>
-            <div class="shape-5"></div>
-            <div class="shape-putol"></div>
-            <div class="bgcolor"></div>
-            <!-- Akhir AnShape -->
-
-            <!-- baris 1 -->
-            <a href="https://elearning.smkti-baliglobal.sch.id/auth?redirectUrl=/" target="_blank"><i class="fas fa-school"></i></a>
-            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.onlinegame.co.id/" target="_blank"><i class="fas fa-gamepad"></i></a>
-            <a href="https://web.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.google.com/" target="_blank"><img class="fa-google" src="img/googlelogo.png">
-            <a href="https://www.w3schools.com/" target="_blank"><i class="fas fa-book"></i></a>
-
-            <!-- baris 2 -->
-            <a href="https://unsplash.com/" target="_blank"><i class="fas fa-camera"></i></a>
-            <a href="https://flatuicolors.com/" target="_blank"><i class="fas fa-palette"></i></a>
-            <a href="https://shopee.co.id/" target="_blank"><img class="fa-shopee" src="img/shopilogo.png"></a>
-            <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img class="fa-gmail" src="img/logogmail.png"></a>
-            <a href="https://www.youtube.com/c/WebProgrammingUNPAS" target="_blank"><i class="fas fa-laptop-code"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><img class="fa-instagram" src="img/instagram.png"></a>
-
-            <!-- baris 3 -->
-            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://web.telegram.org/z/" target="_blank"><i class="fab fa-telegram"></i></a>
-            <a href="https://www.toptal.com/designers/subtlepatterns/page/2/" target="_blank"><i class="fas fa-fill-drip"></i></a>
-            <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.amazon.com/ref=nav_logo" target="_blank"><img class="fa-amazon" src="img/logoamazon.png"></a>
-
-            <!-- baris 4 -->
-            <a href="https://terraria.org/" target="_blank"><img class="fa-terraria" src="img/logoterraria.png"></a>
-            <a href="https://stackoverflow.com/" target="_blank"><img class="fa-overflow" src="img/overflowlogo.png"></a>
-            <a href="https://fontawesome.com/" target="_blank"><img class="fa-fontawesome" src="img/logofont.png"></a>
-            <a href="https://www.netflix.com/id-en/" target="_blank"><img class="fas fa-film" src="img/netplixlogo.png"></a>
-            <a href="https://mcdonalds.co.id/" target="_blank"><img class="fa-mcd" src="img/mcdlogo.png"></a>
-            <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a>
+<body class="font-outfit overflow-x-hidden">
+    <!-- Header -->
+    <header class="fixed flex m-auto w-full left-0 right-0 justify-between z-50 items-center py-4 px-5 laptop:px-10 duration-300">
+        <a href="#home">
+            <h2 class="font-medium text-main text-2xl laptop:text-3xl">Mezzky</h2>
+        </a>
+        <div
+            class="navbar invisible opacity-0 p-5 m-auto w-full laptop:w-4/5 bg-white/80 flex flex-col items-start gap-10 absolute left-0 top-[64px] right-0 rounded-b-2xl duration-300 laptop:flex-row laptop:static laptop:visible laptop:opacity-100 laptop:items-center laptop:justify-between laptop:bg-transparent laptop:p-0 laptop:pl-48 laptop:-mr-[1px]">
+            <nav>
+                <ul class="flex flex-col gap-4 laptop:flex-row">
+                    <li><a class="links" href="#home">Home</a></li>
+                    <li><a class="links" href="#about">About</a></li>
+                    <li><a class="links" href="#service">Services</a></li>
+                    <li><a class="links" href="#skill">Skills</a></li>
+                    <li><a class="links" href="#project">Projects</a></li>
+                    <li><a class="links" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <nav class="btn flex justify-between w-full gap-4 laptop:w-52">
+                <a href="https://wa.me/6289671872255" class="py-2 laptop:duration-100 rounded-md text-main hover:underline cursor-pointer laptop:text-lg">+62-8967-1872-255</a>
+            </nav>
         </div>
-    </div>
-    </div>
-    <!-- Ini Footernya -->
-    <div class="footer">&copy; Copyright 2023 By <a href="https://www.instagram.com/ikiy_zahadha07/" target="_blank">--Rizky Ryan Sahadha---</a>
-    </div>
+        <div class="menu-toggle relative flex items-center h-[30px] w-[30px] laptop:hidden">
+            <button id="hamburger" class="absolute flex flex-col items-end gap-2">
+                <span
+                    class="bg-main h-[3px] w-[35px] block transition ease-in-out duration-300 origin-top-right"></span>
+                <span class="bg-main h-[3px] w-[25px] block transition ease-in-out duration-300"></span>
+                <span
+                    class="bg-main h-[3px] w-[15px] block transition ease-in-out duration-300 origin-bottom-right"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Home -->
+    <section id="home" class="pt-28 laptop:pt-32 px-5 flex laptop:justify-center tablet:px-10 flex-col gap-5 tablet:flex-row-reverse laptop:grid laptop:grid-cols-2 laptop:px-40">
+        <div class="content-home flex gap-4 laptop:gap-6 order-2 laptop:order-1 items-center" data-aos="fade-right" data-aos-duration="1000">
+            <div class="sosmed flex flex-col gap-1 laptop:gap-3">
+                <a class="sosmed-links" href="https://linkedin.com/in/rizky-ryan-sahadha-187161225"><i class="fa-brands fa-linkedin"></i></a>
+                <a class="sosmed-links" href="https://github.com/Mezzky"><i class="fa-brands fa-github"></i></a>
+                <a class="sosmed-links" href="https://instagram.com/mezzdev"><i class="fa-brands fa-instagram"></i></a>
+                <a class="sosmed-links" href="https://twitter.com/mezzrysh"><i class="fa-brands fa-twitter"></i></a>
+                <a class="sosmed-links" href="https://www.facebook.com/rizky.ryansahadha/"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="content flex flex-col gap-2 laptop:gap-3">
+                <span class="text-main laptop:text-xl">Hello</span>
+                <h2 class="text-dark font-bold text-3xl laptop:text-5xl">Im Ryan &#x1F604;</h2>
+                <p class="text-text laptop:text-3xl">A Passionate Frontend Developer and UI/UX Designer &#x1F31F;</p>
+                <a class="btn-link bg-main text-white hover:bg-main/60" href="#contact">Hire Me!</a>
+            </div>
+        </div>
+        <div class="img-home order-1 flex items-center justify-center laptop:order-2" data-aos="fade-in" data-aos-duration="1000">
+            <img class="shadow-2xl rounded-full" src="./Assets/profile-ryan.png" alt="Profile">
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="pt-20 px-5 grid tablet:px-10 grid-cols-1 gap-5 tablet:grid-cols-2 laptop:px-40 laptop:items-center laptop:gap-10">
+        <div class="about-img flex items-center justify-center" data-aos="fade-in" data-aos-duration="1000">
+            <img class="rounded-lg" src="./Assets/about-ryan.png" alt="About">
+        </div>
+        <div class="about-content flex flex-col gap-2 laptop:gap-4" data-aos="fade-right" data-aos-duration="1000">
+            <h2 class="text-dark text-2xl font-bold laptop:text-4xl">About Me &#x1F3C6;</h2>
+            <span class="text-dark laptop:text-xl">Intoduce | Experience</span>
+            <p class="text-text laptop:text-2xl">My name is Rizky Ryan Sahadha, im 19 Years Old, i live in Indonesia, i have experience in Frontend development, UI/UX Design and work as a freelance frontend developer</p>
+            <a class="btn-link bg-main text-white hover:bg-main/60" href="./Assets/CV/ryan-resume.pdf" download>Download CV</a>
+        </div>
+    </section>
+
+    <!-- Service -->
+    <section id="service" class="pt-20 px-5 flex tablet:px-10 flex-col gap-5 laptop:gap-8 laptop:px-40">
+        <div class="service-title flex flex-col gap-1 laptop:gap-3" data-aos="fade-in" data-aos-duration="1000">
+            <span class="h-full w-[2px] bg-main"></span>
+            <h2 class="text-dark text-2xl font-bold laptop:text-4xl">Specializing In &#x1F4AA;</h2>
+            <p class="text-text laptop:text-xl">I create powerful websites with captivating UI/UX, ensuring seamless experiences across all devices.</p>
+        </div>
+        <div class="service-card px-5 grid grid-cols-1 gap-10 laptop:grid-cols-3">
+            <div class="card group relative rounded-md pt-8 px-5 pb-12 flex flex-col gap-3 justify-center shadow-xl overflow-hidden hover:bg-main duration-300 transition-all" data-aos="fade-right" data-aos-duration="1000">
+                <div class="bola-top top-0 left-2 absolute grid grid-cols-3 gap-1">
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                </div>
+                <span class="h-full w-1 bg-red-500 absolute left-0 bottom-0 rounded-tl-full rounded-bl-full group-hover:bg-dark"></span>
+                <h3 class="z-10 text-2xl laptop:text-3xl font-semibold text-dark duration-300 group-hover:text-white">UI/UX Design</h3>
+                <p class="z-10 text-text duration-300 group-hover:text-white">With a passion for User Interface and User Experience Design. I craft interfaces that captivate audiences and enhance the overall user experience. Let's create user-centric designs that delight and engage.</p>
+                <a class="z-10 text-main duration-300 group-hover:text-white w-max" href="">Read More</a>
+                <div class="bola-bot bottom-4 right-4 absolute grid grid-cols-4 gap-1">
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                </div>
+            </div>
+
+            <div class="card group relative rounded-md pt-8 px-5 pb-12 flex flex-col gap-3 justify-center shadow-xl overflow-hidden hover:bg-main duration-300 transition-all" data-aos="fade-right" data-aos-duration="1000">
+                <div class="bola-top top-0 left-2 absolute grid grid-cols-3 gap-1">
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                </div>
+                <span class="h-full w-1 bg-emerald-500 absolute left-0 bottom-0 rounded-tl-full rounded-bl-full group-hover:bg-dark"></span>
+                <h3 class="z-10 text-2xl laptop:text-3xl font-semibold text-dark duration-300 group-hover:text-white">Web Development</h3>
+                <p class="z-10 text-text duration-300 group-hover:text-white">I create powerful and interactive websites that bring ideas to life. My skill set includes crafting efficient, scalable, and secure web applications using the latest technologies and best practices. Let's collaborate to build the digital presence your business deserves.</p>
+                <a class="z-10 text-main duration-300 group-hover:text-white w-max" href="">Read More</a>
+                <div class="bola-bot bottom-4 right-4 absolute grid grid-cols-4 gap-1">
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                </div>
+            </div>
+
+            <div class="card group relative rounded-md pt-8 px-5 pb-12 flex flex-col gap-3 justify-center shadow-xl overflow-hidden hover:bg-main duration-300 transition-all" data-aos="fade-right" data-aos-duration="1000">
+                <div class="bola-top top-0 left-2 absolute grid grid-cols-3 gap-1">
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                </div>
+                <span class="h-full w-1 bg-yellow-500 absolute left-0 bottom-0 rounded-tl-full rounded-bl-full group-hover:bg-dark"></span>
+                <h3 class="z-10 text-2xl laptop:text-3xl font-semibold text-dark duration-300 group-hover:text-white">Responsive Design</h3>
+                <p class="z-10 text-text duration-300 group-hover:text-white"> Crafting flawless websites that adapt to all devices. Reach a wider audience with responsive design. Stay ahead in today's mobile-first world.</p>
+                <a class="z-10 text-main duration-300 group-hover:text-white w-max" href="">Read More</a>
+                <div class="bola-bot bottom-4 right-4 absolute grid grid-cols-4 gap-1">
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                    <span class="w-[6px] h-[6px] bg-white rounded-full"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skill" class="pt-20 px-5 grid grid-cols-1 gap-5 tablet:grid-cols-2 laptop:px-40">
+        <div class="skill-content flex flex-col gap-5">
+            <div class="skill-title flex flex-col gap-2" data-aos="fade-in" data-aos-duration="1000">
+                <h2 class="text-dark text-2xl font-bold laptop:text-3xl">Skills & Experiences &#x1F4BB;</h2>
+                <p class="text-text laptop:text-xl">Experienced UI/UX Designer and Frontend Developer with 2 years of learning and 3 years of professional work.</p>
+            </div>
+            <h3 class="text-dark text-xl font-semibold laptop:text-2xl" data-aos="fade-in" data-aos-duration="1000">My Skill</h3>
+            <div class="skill-box grid grid-cols-3 gap-5 laptop:gap-8">
+                <div class="skill flex flex-col gap-2 laptop:gap-3 items-center" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="laptop:scale-105 icon relative group rounded-full w-16 h-16 flex items-center justify-center bg-accent hover:bg-dark duration-300 cursor-pointer">
+                        <img class="w-10 absolute hidden group-hover:block" src="./Assets/svg/JS-icon-white.svg" alt="icon-white">
+                        <img class="w-10 group-hover:hidden" src="./Assets/svg/JS-icon-dark.svg" alt="icon-dark">
+                    </div>
+                    <span class="text-text text-lg">HTML/CSS/JS</span>
+                </div>
+                <div class="skill flex flex-col gap-2 laptop:gap-3 items-center" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="laptop:scale-105 icon relative group rounded-full w-16 h-16 flex items-center justify-center bg-accent duration-300 hover:bg-dark cursor-pointer">
+                        <i class="fa-brands fa-sass text-3xl text-dark duration-300 group-hover:text-white"></i>
+                    </div>
+                    <span class="text-text text-lg">Sass</span>
+                </div>
+                <div class="skill flex flex-col gap-2 laptop:gap-3 items-center" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="laptop:scale-105 icon relative group rounded-full w-16 h-16 flex items-center justify-center bg-accent duration-300 hover:bg-dark cursor-pointer">
+                        <img class="w-10 absolute hidden group-hover:block" src="./Assets/svg/tailwindcss-icon-white.svg" alt="icon-white">
+                        <img class="w-10 group-hover:hidden" src="./Assets/svg/tailwindcss-icon-dark.svg" alt="icon-dark">
+                    </div>
+                    <span class="text-text text-lg">Tailwindcss</span>
+                </div>
+                <div class="skill flex flex-col gap-2 laptop:gap-3 items-center" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="laptop:scale-105 icon relative group rounded-full w-16 h-16 flex items-center justify-center bg-accent duration-300 hover:bg-dark cursor-pointer">
+                        <i class="fa-brands fa-react text-3xl text-dark duration-300 group-hover:text-white"></i>
+                    </div>
+                    <span class="text-text text-lg">ReactJS</span>
+                </div>
+                <div class="skill flex flex-col gap-2 laptop:gap-3 items-center" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="laptop:scale-105 icon relative group rounded-full w-16 h-16 flex items-center justify-center bg-accent duration-300 hover:bg-dark cursor-pointer">
+                        <i class="fa-brands fa-git-alt text-3xl text-dark duration-300 group-hover:text-white"></i>
+                    </div>
+                    <span class="text-text text-lg">Git</span>
+                </div>
+                <div class="skill flex flex-col gap-2 laptop:gap-3 items-center" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="laptop:scale-105 icon relative group rounded-full w-16 h-16 flex items-center justify-center bg-accent duration-300 hover:bg-dark cursor-pointer">
+                        <i class="fa-brands fa-figma text-3xl text-dark duration-300 group-hover:text-white"></i>
+                    </div>
+                    <span class="text-text text-lg">Figma</span>
+                </div>
+            </div>
+        </div>
+        <div class="experience flex flex-col gap-5">
+            <h2 class="text-dark font-bold text-2xl" data-aos="fade-in" data-aos-duration="1000">Experiences</h2>
+            <span class="w-full h-2 bg-main rounded-lg" data-aos="zoom-in" data-aos-duration="1000"></span>
+            <div class="experience-box flex flex-col gap-2" data-aos="fade-right" data-aos-duration="1000">
+                <p class="text-text laptop:text-xl">2020 - 2021</p>
+                <div class="exp flex flex-col gap-1">
+                    <h3 class="text-dark font-semibold text-xl laptop:text-2xl">Internship UI/UX Designer</h3>
+                    <p class="text-text laptop:text-xl">Digital Lontar</p>
+                </div>
+            </div>
+            <span class="w-full h-2 bg-main rounded-lg" data-aos="zoom-in" data-aos-duration="1000"></span>
+            <div class="experience-box flex flex-col gap-2" data-aos="fade-right" data-aos-duration="1000">
+                <p class="text-text laptop:text-xl">2021 - 2022</p>
+                <div class="exp flex flex-col gap-1">
+                    <h3 class="text-dark font-semibold text-xl laptop:text-2xl">Frontend Engineer</h3>
+                    <p class="text-text laptop:text-xl">Segmed Inc</p>
+                </div>
+            </div>
+            <span class="w-full h-2 bg-main rounded-lg" data-aos="zoom-in" data-aos-duration="1000"></span>
+            <div class="experience-box flex flex-col gap-2" data-aos="fade-right" data-aos-duration="1000">
+                <p class="text-text laptop:text-xl">2022 - Present</p>
+                <div class="exp flex flex-col gap-1">
+                    <h3 class="text-dark font-semibold text-xl laptop:text-2xl">Freelance Frontend Developer</h3>
+                    <p class="text-text laptop:text-xl">Fiverr & Upwork</p>
+                </div>
+            </div>
+            <span class="w-full h-2 bg-main rounded-lg" data-aos="zoom-in" data-aos-duration="1000"></span>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="project" class="py-20 grid grid-cols-1 gap-5 laptop:gap-10">
+        <div class="tittle-project bg-main py-5 px-5 flex tablet:px-10 flex-col gap-5 laptop:px-40 laptop:flex-row laptop:py-10" data-aos="fade-in" data-aos-duration="1000">
+            <div class="title flex flex-col gap-2">
+                <h2 class="text-white text-2xl font-bold laptop:text-3xl">My Recent Works &#x1F4BC;</h2>
+                <p class="text-white laptop:text-xl">Unlock the wonders of my portfolio. Dive into frontend excellence, explore diverse ventures, and witness imaginative ingenuity. Join satisfied clients and embark on a journey from concept to reality.</p>
+            </div>
+            <div class="title-btn flex items-center justify-center">
+                <a class="btn-link bg-white text-dark hover:bg-white/60" href="https://github.com/Mezzky">See More</a>
+            </div>
+        </div>
+        <div class="project-container grid grid-cols-1 gap-10 px-5 laptop:px-40">
+            <div class="project grid grid-cols-1 gap-2 laptop:gap-10 tablet:grid-cols-2">
+                <img class="rounded-[20px]" src="./Assets/Mockup Helsique.png" alt="project-5" data-aos="fade-in" data-aos-duration="1000">
+                <div class="flex flex-col gap-2 justify-center" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="text-dark font-semibold text-xl text-center">Helsique</h3>
+                    <p class="text-text laptop:text-xl text-center">"Helsique" – Your ultimate fitness companion. Diverse programs, personalized guidance, and expert resources. Start your transformative journey now.</p>
+                    <div class="btn flex gap-5 justify-center">
+                        <a class="links" href="https://github.com/Mezzky/helsique">Code <i class="text-dark fa-brands fa-github"></i></a>
+                        <a class="links" href="https://mezzky.github.io/helsique">Link Demo <i class="text-dark fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project grid grid-cols-1 gap-2 laptop:gap-10 tablet:grid-cols-2">
+                <img class="tablet:col-start-2 rounded-[20px]" src="./Assets/Mockup WebDevToolsFix.png" alt="project-1" data-aos="fade-in" data-aos-duration="1000">
+                <div class="tablet:row-start-1 flex flex-col gap-2 justify-center" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="text-dark font-semibold text-xl text-center">Web Dev Tools</h3>
+                    <p class="text-text laptop:text-xl text-center">"Web Dev Tools" – Your essential app-building toolbox. Empowering developers with curated tools for streamlined coding. From generators to debugging aids, we've got it all. Simplify your workflow and unleash your coding potential with us. Your one-stop destination for seamless development.</p>
+                    <div class="btn flex gap-5 justify-center">
+                        <a class="links" href="https://github.com/Mezzky/web-dev-tools">Code <i class="text-dark fa-brands fa-github"></i></a>
+                        <a class="links" href="https://mezzky.github.io/web-dev-tools/">Link Demo <i class="text-dark fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project grid grid-cols-1 gap-2 laptop:gap-10 tablet:grid-cols-2">
+                <img class="rounded-[20px]" src="./Assets/Mockup Wordmogul.png" alt="project-2" data-aos="fade-in" data-aos-duration="1000">
+                <div class="flex flex-col gap-2 justify-center" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="text-dark font-semibold text-xl text-center">Wordmogul</h3>
+                    <p class="text-text laptop:text-xl text-center">"Wordmogul" – Empowering writers and bloggers. Create, edit, and publish with ease. Connect with a vibrant community. Unleash your unique voice. Conquer the world of words.</p>
+                    <div class="btn flex gap-5 justify-center">
+                        <a class="links" href="https://github.com/Mezzky/word-mogul">Code <i class="text-dark fa-brands fa-github"></i></a>
+                        <a class="links" href="https://wordmogul-testing.mezzky.repl.co/">Link Demo <i class="text-dark fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project grid grid-cols-1 gap-2 laptop:gap-10 tablet:grid-cols-2">
+                <img class="tablet:col-start-2 rounded-[20px]" src="./Assets/Kaddy-Service.png" alt="project-3" data-aos="fade-in" data-aos-duration="1000">
+                <div class="tablet:row-start-1 flex flex-col gap-2 justify-center" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="text-dark font-semibold text-xl text-center">Kaddy Service</h3>
+                    <p class="text-text laptop:text-xl text-center">"Kaddy Service" – Your tech solutions hub. Top-notch computer services, hardware repairs, software troubleshooting, and more. Experience expertise and personalized support. Your go-to platform for all things tech.</p>
+                    <div class="btn flex gap-5 justify-center">
+                        <a class="links" href="https://github.com/Mezzky/kaddy-service">Code <i class="text-dark fa-brands fa-github"></i></a>
+                        <a class="links" href="https://mezzky.github.io/kaddy-service">Link Demo <i class="text-dark fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project grid grid-cols-1 gap-2 laptop:gap-10 tablet:grid-cols-2">
+                <img class="rounded-[20px]" src="./Assets/HotelzContact Page.png" alt="project-4" data-aos="fade-in" data-aos-duration="1000">
+                <div class="flex flex-col gap-2 justify-center" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="text-dark font-semibold text-xl text-center">Valuations</h3>
+                    <p class="text-text laptop:text-xl text-center">"Valuations" – Your real estate experts. Top-notch appraisals and expert advice. Navigate the real estate landscape with us. Trusted, reliable, and personalized service.</p>
+                    <div class="btn flex gap-5 justify-center">
+                        <a class="links" href="https://github.com/Mezzky/valuations">Code <i class="text-dark fa-brands fa-github"></i></a>
+                        <a class="links" href="https://mezzky.github.io/valuations">Link Demo <i class="text-dark fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preview -->
+    <!-- Under Construction &#x1F4C8; -->
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 px-5 flex tablet:px-10 flex-col items-center justify-center gap-5 border-t border-b border-dark laptop:px-40" data-aos="fade-in" data-aos-duration="1000">
+        <span class="text-main font-semibold">Get In Touch</span>
+        <h2 class="text-dark font-bold text-2xl text-center laptop:text-3xl">Let's Work Together</h2>
+        <p class="text-text laptop:text-xl text-center">Elevate your digital presence with me. Experienced UI/UX Designer and Frontend Developer. Craft unforgettable user experiences together. Let's bring your vision to life. Innovate and achieve exceptional results.</p>
+        <a class="px-10 py-4 rounded-md font-semibold bg-main text-white hover:bg-main/60 laptop:text-xl" href="mailto:ryansahadha@gmail.com">Connect</a>
+        <i class="fa-solid fa-envelope text-5xl text-text"></i>
+    </section>
+
+    <!-- Footer -->
+    <footer class="flex flex-col">
+        <div class="footer-content p-5 flex flex-col justify-between gap-5 border-b border-dark tablet:p-8">
+            <div class="content grid grid-cols-1 gap-5 tablet:grid-cols-2 laptop:grid-cols-3">
+                <div class="logo">
+                    <a href="#home">
+                        <h2 class="font-medium text-main text-2xl laptop:text-4xl">Mezzky</h2>
+                    </a>
+                </div>
+                <ul class="flex flex-col gap-2 tablet:flex-row laptop:gap-4 self-end">
+                    <li><a class="links" href="#home">Home</a></li>
+                    <li><a class="links" href="#about">About</a></li>
+                    <li><a class="links" href="#service">Services</a></li>
+                    <li><a class="links" href="#skill">Skills</a></li>
+                    <li><a class="links" href="#project">Projects</a></li>
+                    <li><a class="links" href="#contact">Contact</a></li>
+                </ul>
+                <div class="sosmed flex gap-2 laptop:gap-5 laptop:self-end">
+                    <a class="sosmed-links hover:-translate-y-1" href="https://linkedin.com/in/rizky-ryan-sahadha-187161225"><i class="fa-brands fa-linkedin"></i></a>
+                    <a class="sosmed-links hover:-translate-y-1" href="https://github.com/Mezzky"><i class="fa-brands fa-github"></i></a>
+                    <a class="sosmed-links hover:-translate-y-1" href="https://instagram.com/mezzdev"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="sosmed-links hover:-translate-y-1" href="https://twitter.com/mezzrysh"><i class="fa-brands fa-twitter"></i></a>
+                    <a class="sosmed-links hover:-translate-y-1" href="https://www.facebook.com/rizky.ryansahadha/"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright flex justify-center py-4">
+            <p class="text-text laptop:text-xl">&copy; Copyright <span id="year"></span> By <a class="links laptop:text-xl" href="https://github.com/Mezzky">Mezz</a></p>
+        </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="./JS/script.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
